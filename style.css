@@ -1,0 +1,112 @@
+* {
+  scroll-behavior: smooth;
+  font-family: "Liberation Sans", Tahoma, Verdana, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+  background-color: transparent;
+}
+
+body {
+  -moz-transform: scale(2.1);
+  transform-origin: 50% 0;
+  transform: scale(2.1);
+  margin: 0 auto;
+  color: #333;
+  background-color: #f9eedd;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5em;
+  width: 300px;
+  text-align: center;
+}
+
+a {
+  color: #bd0707;
+}
+
+.right-side {
+  border-left: 1px solid #CCC;
+  padding-left: 20px;
+  width: 340px;
+  text-align: center;
+}
+
+.game-board {
+  margin: 0 auto;
+  width: 145px;
+}
+
+#remaining-mines {
+  color: #bd0707;
+  font-weight: bold;
+}
+
+#game-result {
+  font-size: 18px;
+  height: 20px;
+  font-weight: bold;
+  width: 144px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.game-over {
+  color: red;
+}
+
+.game-win {
+  color: green;
+}
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked~.read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state~.read-more-wrap img {
+  display: none;
+}
+
+.read-more-state:checked~.read-more-wrap img {
+  display: block;
+}
+
+.read-more-state~.read-more-trigger:before {
+  content: 'Vezi mai mult';
+}
+
+.read-more-state:checked~.read-more-trigger:before {
+  content: 'Vezi mai puțin';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
